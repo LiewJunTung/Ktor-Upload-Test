@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC36607D23056D4400F91BA6 /* galaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = EC36607C23056D4400F91BA6 /* galaxy.png */; };
 		ECC053C22304EF690075FD2B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC053C12304EF690075FD2B /* Images.xcassets */; };
 		ECC053C42304F1C00075FD2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC053C32304F1C00075FD2B /* Assets.xcassets */; };
 		F861D7E1207FA40F0085E80D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F861D7E0207FA40F0085E80D /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		EC36607C23056D4400F91BA6 /* galaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galaxy.png; sourceTree = "<group>"; };
 		ECC053C12304EF690075FD2B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		ECC053C32304F1C00075FD2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F861D7DD207FA40F0085E80D /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 		F861D7DF207FA40F0085E80D /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				EC36607C23056D4400F91BA6 /* galaxy.png */,
 				ECC053C32304F1C00075FD2B /* Assets.xcassets */,
 				F861D7E0207FA40F0085E80D /* AppDelegate.swift */,
 				F861D7E2207FA40F0085E80D /* ViewController.swift */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC053C22304EF690075FD2B /* Images.xcassets in Resources */,
+				EC36607D23056D4400F91BA6 /* galaxy.png in Resources */,
 				F861D7EB207FA4100085E80D /* LaunchScreen.storyboard in Resources */,
 				ECC053C42304F1C00075FD2B /* Assets.xcassets in Resources */,
 				F861D7E6207FA40F0085E80D /* Main.storyboard in Resources */,

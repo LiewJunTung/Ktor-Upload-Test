@@ -22,9 +22,8 @@ class FooPresenter {
         }
     }
 
-    fun uploadStuff(uploadUrl: String, fileUrl: String, filename: String) {
+    fun uploadStuff(uploadUrl: String, byteArray: ByteArray, filename: String) {
         GlobalScope.launch(dispatcher) {
-            val byteArray = readFile(fileUrl)
 
             client.submitForm {
                 url(uploadUrl)
