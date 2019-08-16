@@ -4,6 +4,12 @@ apply plugin: "com.squareup.sqldelight"
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android-extensions'
 
+sqldelight {
+    KtDb {
+        packageName = "org.liewjuntung.testdb"
+    }
+}
+
 android {
     compileSdkVersion 28
     defaultConfig {

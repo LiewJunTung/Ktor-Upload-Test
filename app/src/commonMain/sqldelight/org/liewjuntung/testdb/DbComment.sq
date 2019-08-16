@@ -1,0 +1,16 @@
+CREATE TABLE Comment (
+  id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  postId INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  body TEXT NOT NULL
+);
+
+insertComment:
+INSERT INTO Comment (postId, name, email, body) VALUES (?, ?, ?, ?);
+
+selectComment:
+SELECT * FROM Comment WHERE id = ?;
+
+getAllComments:
+SELECT * FROM Comment;

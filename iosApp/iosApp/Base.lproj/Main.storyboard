@@ -19,14 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cak-wb-syn">
-                                <rect key="frame" x="166.5" y="120" width="42" height="20.5"/>
+                                <rect key="frame" x="67" y="120" width="241" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="hYn-1c-she"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlg-Pn-gzo">
                                 <rect key="frame" x="97" y="420" width="181" height="30"/>
-                                <state key="normal" title="Upload"/>
+                                <state key="normal" title="Load DB"/>
                                 <connections>
                                     <action selector="button1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xlO-GB-Hm3"/>
                                 </connections>
@@ -34,16 +37,42 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huI-HU-Qyd">
                                 <rect key="frame" x="67" y="187" width="241" height="128"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center"
+                                    contentVerticalAlignment="center" buttonType="roundedRect"
+                                    lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO"
+                                    id="iUh-w8-Ob3">
+                                <rect key="frame" x="97" y="497" width="181" height="30"/>
+                                <state key="normal" title="GET"/>
+                                <connections>
+                                    <action selector="button2:" destination="BYZ-38-t0r" eventType="touchUpInside"
+                                            id="caQ-jO-kK6"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750"
+                                                   verticalHuggingPriority="750" style="gray"
+                                                   translatesAutoresizingMaskIntoConstraints="NO" id="FmT-n5-Ir1">
+                                <rect key="frame" x="177.5" y="335" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="huI-HU-Qyd" secondAttribute="trailing" constant="67" id="0rL-0H-scB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jlg-Pn-gzo" secondAttribute="bottom" constant="217" id="0u5-71-DX1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iUh-w8-Ob3"
+                                        secondAttribute="bottom" constant="140" id="2LR-dJ-bAu"/>
                             <constraint firstItem="Jlg-Pn-gzo" firstAttribute="top" secondItem="huI-HU-Qyd" secondAttribute="bottom" constant="105" id="4eF-h5-ESF"/>
                             <constraint firstItem="huI-HU-Qyd" firstAttribute="top" secondItem="Cak-wb-syn" secondAttribute="bottom" constant="46.5" id="67j-P9-zON"/>
                             <constraint firstItem="huI-HU-Qyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="97Y-dU-nSB"/>
+                            <constraint firstItem="FmT-n5-Ir1" firstAttribute="centerX" secondItem="6Tk-OE-BBY"
+                                        secondAttribute="centerX" id="Lzt-rQ-FlD"/>
                             <constraint firstItem="Jlg-Pn-gzo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="OVd-dI-84I"/>
+                            <constraint firstItem="iUh-w8-Ob3" firstAttribute="leading" secondItem="Jlg-Pn-gzo"
+                                        secondAttribute="leading" id="Q3L-1H-5YB"/>
+                            <constraint firstItem="FmT-n5-Ir1" firstAttribute="top" secondItem="huI-HU-Qyd"
+                                        secondAttribute="bottom" constant="20" id="TdC-rf-MSU"/>
                             <constraint firstItem="huI-HU-Qyd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jIo-IU-phQ"/>
+                            <constraint firstItem="iUh-w8-Ob3" firstAttribute="centerX" secondItem="6Tk-OE-BBY"
+                                        secondAttribute="centerX" id="lpU-q9-CVb"/>
                             <constraint firstItem="Cak-wb-syn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nZg-zG-f8Z"/>
                             <constraint firstItem="Jlg-Pn-gzo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="soC-Vd-oeq"/>
                             <constraint firstItem="Cak-wb-syn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="zUI-dV-Yy0"/>
@@ -52,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="imageview" destination="huI-HU-Qyd" id="weu-CB-hYh"/>
+                        <outlet property="indicator" destination="FmT-n5-Ir1" id="f08-jx-uTB"/>
                         <outlet property="label" destination="Cak-wb-syn" id="pzW-Xf-pbM"/>
                     </connections>
                 </viewController>
